@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="/src/style.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+    </style>
+    <!-- SCRIPTS -->
+    <script type="text/javascript" src="/src/app.js"></script>
+    <script
+      src="https://kit.fontawesome.com/0ed615851d.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>ROCK, PAPER, SCISSOR | By MJAKOBSEN</title>
+  </head>
+  <body>
+    <!-- 
+      I had a lot of fun making this and had some great inspiration from a lot of great games online. A special thanks to @pritishnagpal for sharing his version, it really helped me add a great scoreboard, check his version out here https://www.geeksforgeeks.org/rock-paper-and-scissor-game-using-javascript/
+    -->
+    <div class="content">
+      <!-- HEADER -->
+      <header>
+        <div class="gameIcon"><i class="fas fa-dice"></i></div>
+        <h1>ROCK, PAPER, SCISSOR!</h1>
+        <p>
+          <strong>Choose Your Weapon</strong> and Play against the Computer at
+          your own risk..
+        </p>
+      </header>
+      <!-- GAME BUTTONS -->
+      <div class="gameOptions">
+        <button onClick="launchGame(gameOptions[0], computerChoice)">
+          <i class="fas fa-hand-rock"></i>
+        </button>
+        <button onClick="launchGame(gameOptions[1], computerChoice)">
+          <i class="fas fa-hand-paper"></i>
+        </button>
+        <button onClick="launchGame(gameOptions[2], computerChoice)">
+          <i class="fas fa-hand-scissors"></i>
+        </button>
+      </div>
+      <!-- GAME RESULT AREA -->
+      <div class="scoreOutput">
+        <h2>ARENA</h2>
+        <p>Player Weapon = <span id="playerChoice"></span></p>
+        <span>VS</span>
+        <p>Computer Weapon = <span id="computerChoice"></span></p>
+        <p id="result"></p>
+      </div>
+      <!-- SCORES -->
+      <div class="scores">
+        <div class="playerScore">
+          <h2>Player</h2>
+          <div class="player-count">0</div>
+        </div>
+        <div class="computerScore">
+          <h2>Computer</h2>
+          <div class="computer-count">0</div>
+        </div>
+        <div class="drawScore">
+          <h2>Draws</h2>
+          <div class="draw-count">0</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
