@@ -4,8 +4,8 @@ body {
     url("https://images.unsplash.com/photo-1618214839021-3fbe98a597bc?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8cm9jayUyMHBhcGVyJTIwc2Npc3NvcnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=60");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   color: #fff;
-  height: 100vh;
 }
 
 h1 {
@@ -40,6 +40,10 @@ span {
 
 strong {
   color: #ffbf00;
+}
+
+ul {
+  list-style: none;
 }
 
 .content {
