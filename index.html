@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <script src="https://kit.fontawesome.com/0ed615851d.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <header>
+    <div>
+      <div>
+        <h1>ROCK, PAPER & SCISSOR</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#" class="navBtn" id="restartBtn" onclick="restartGame()">Reload Game</a></li>
+          <li><a href="#" class="navBtn" onclick="leaderBoardAlert()">Leader board</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section>
+      <div class="container">
+        <form id="form">
+          <input type="text" placeholder="User Name" id="username">
+          <button type="submit" class="formBtn" value='Submit'>Submit</button>
+        </form>
+      </div>
+    </section>
+    <section>
+      <div class="sectionTitle">
+        <h2>Select Your Weapon!</h2>
+      </div>
+      <div class="choices">
+        <a onClick="launchGame(gameOptions[0], computerChoice)">
+          <i class="fas fa-hand-rock"></i>
+        </a>
+        <a onClick="launchGame(gameOptions[1], computerChoice)">
+          <i class="fas fa-hand-paper"></i>
+        </a>
+        <a onClick="launchGame(gameOptions[2], computerChoice)">
+          <i class="fas fa-hand-scissors"></i>
+        </a>
+      </div>
+    </section>
+    <!-- GAME RESULT AREA -->
+    <div class="scoreOutput">
+      <h2>ARENA</h2>
+      <p><span class="playerName">Player</span> Weapon = <span id="playerChoice"></span></p>
+      <span>VS</span>
+      <p>Computer Weapon = <span id="computerChoice"></span></p>
+      <p id="result"></p>
+    </div>
+
+    <!-- SCORE BOARD -->
+    <section>
+      <h2>RESULTS</h2>
+      <div class="scores">
+        <div class="playerScore">
+          <h2 class="playerName"><span class="playerNameResult">Player</span></h2>
+          <div class="player-count">0</div>
+        </div>
+        <div class="computerScore">
+          <h2>Computer</h2>
+          <div class="computer-count">0</div>
+        </div>
+        <div class="drawScore">
+          <h2>Draws</h2>
+          <div class="draw-count">0</div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="scripts/app.js" charset="utf-8"></script>
+</body>
+
+</html>
