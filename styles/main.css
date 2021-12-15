@@ -1,3 +1,8 @@
+* {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
 a {
   text-decoration: none;
   font-size: 1rem;
@@ -125,8 +130,7 @@ input {
 /* MEDIA QUERIES */
 
 @media only screen and (max-width: 600px) {
-  /* For mobile phones: */
-  .choices {
-    font-size: 40px;
+  body {
+    background-color: lightblue;
   }
 }
