@@ -9,59 +9,32 @@ let computerScore = 0; // variable to store the computers score everytime it win
 let drawScore = 0; // variable storing the total number of draws
 let gamesPlayed = 0;
 
+
+
+
 // ENTIRE GAME LOGIC
 const launchGame = (playerChoice, computerChoice) => {
   const playerScoreBoard = document.querySelector('.player-count');
   const computerScoreBoard = document.querySelector('.computer-count');
   const drawScoreBoard = document.querySelector('.draw-count');
   computerChoice = gameOptions[Math.floor(Math.random() * gameOptions.length)];
+  const playerWon = (playerChoice === 'rock' && computerChoice !== 'paper') || (playerChoice === 'paper' && computerChoice !== 'scissor') || (playerChoice === 'scissor' && computerChoice !== 'rock');
+  const draw = (playerChoice === computerChoice);
 
-  if (playerChoice === computerChoice) {
+  if (draw) {
     document.querySelector('#result').innerHTML = 'Its a draw, try again!';
     drawScore++;
     drawScoreBoard.textContent = drawScore;
-    gamesPlayed++;
-  } else if (playerChoice === 'rock' && computerChoice !== 'paper') {
-    document.querySelector('#result').innerHTML =
-      'Rock beats scissor so the PLAYER wins!';
+  } else if (playerWon) {
+    document.querySelector('#result').innerHTML = 'Wohoo, you WIN!!!';
     playerScore++;
     playerScoreBoard.textContent = playerScore;
-    gamesPlayed++;
-  } else if (playerChoice === 'rock' && computerChoice === 'paper') {
-    document.querySelector('#result').innerHTML =
-      'Paper beats rock so the COMPUTER wins!';
-    computerScore++;
-    computerScoreBoard.textContent = computerScore;
-    gamesPlayed++;
-  } else if (playerChoice === 'paper' && computerChoice !== 'scissor') {
-    document.querySelector('#result').innerHTML =
-      'Paper beats rock so the PLAYER wins!';
-    playerScore++;
-    playerScoreBoard.textContent = playerScore;
-    gamesPlayed++;
-  } else if (playerChoice === 'paper' && computerChoice === 'scissor') {
-    document.querySelector('#result').innerHTML =
-      'Scissor beats paper so the COMPUTER wins!';
-    computerScore++;
-    computerScoreBoard.textContent = computerScore;
-    gamesPlayed++;
-  } else if (playerChoice === 'scissor' && computerChoice !== 'rock') {
-    document.querySelector('#result').innerHTML =
-      'Scissor beats paper so the PLAYER wins!';
-    playerScore++;
-    playerScoreBoard.textContent = playerScore;
-    gamesPlayed++;
-  } else if (playerChoice === 'scissor' && computerChoice === 'rock') {
-    document.querySelector('#result').innerHTML =
-      'Rock beats scissor so the COMPUTER wins!';
-    computerScore++;
-    computerScoreBoard.textContent = computerScore;
-    gamesPlayed++;
   } else {
-    document.querySelector('#result').innerHTML =
-      'Something went wrong here, please try again or if the problem persists go play with a real person..:-)';
+    document.querySelector('#result').innerHTML = 'OUCH! The COMPUTER wins';
+    computerScore++;
+    computerScoreBoard.textContent = computerScore;
   }
-
+  gamesPlayed++;
   document.querySelector('#playerChoice').innerHTML = playerChoice;
   document.querySelector('#computerChoice').innerHTML = computerChoice;
 };
