@@ -1,7 +1,3 @@
-html {
-  width: 100%;
-}
-
 a {
   text-decoration: none;
   font-size: 1rem;
@@ -20,10 +16,6 @@ p {
 }
 
 section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   text-align: center;
 }
 
@@ -38,6 +30,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 100vh;
 }
 
 nav ul {
@@ -127,4 +120,13 @@ input {
 
 .hideForm {
   display: none;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 600px) {
+  /* For mobile phones: */
+  .choices {
+    font-size: 40px;
+  }
 }
