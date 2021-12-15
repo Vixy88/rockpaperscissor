@@ -62,8 +62,6 @@ nav ul li:nth-child(-n+2) {
 
 .choices {
   display: flex;
-  justify-content: space-between;
-  list-style: none;
 }
 
 .choices a {
@@ -129,8 +127,8 @@ input {
 
 /* MEDIA QUERIES */
 
-@media only screen and (max-width: 600px) {
-  body {
-    background-color: lightblue;
+@media screen and (max-width: 600px) {
+  header, main {
+    zoom: 115%;
   }
 }
